@@ -66,7 +66,7 @@ Tags::HTML::Page::End - Tags helper for HTML page end.
 
 =head2 C<new>
 
- my $obj = Tags::HTML::Page::Begin->new(%params);
+ my $obj = Tags::HTML::Page::End->new(%params);
 
 Constructor.
 

@@ -9,7 +9,7 @@ SYNOPSIS
 
 METHODS
   "new"
-     my $obj = Tags::HTML::Page::Begin->new(%params);
+     my $obj = Tags::HTML::Page::End->new(%params);
 
     Constructor.
 
