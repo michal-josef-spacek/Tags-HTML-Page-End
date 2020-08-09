@@ -93,6 +93,7 @@ Returns undef.
 =head1 ERRORS
 
  new():
+         Parameter 'tags' must be a 'Tags::Output::*' class.
          From Class::Utils::set_params():
                  Unknown parameter '%s'.
 
