@@ -1,7 +1,6 @@
 use strict;
 use warnings;
 
-use CSS::Struct::Output::Raw;
 use Tags::HTML::Page::End;
 use Tags::Output::Structure;
 use Test::More 'tests' => 2;
