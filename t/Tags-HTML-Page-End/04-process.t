@@ -2,9 +2,9 @@ use strict;
 use warnings;
 
 use Tags::HTML::Page::End;
-use Tags::Output::Structure;
 use Test::More 'tests' => 2;
 use Test::NoWarnings;
+use Tags::Output::Structure;
 
 # Test.
 my $tags = Tags::Output::Structure->new;

@@ -4,9 +4,9 @@ use warnings;
 use English;
 use Error::Pure::Utils qw(clean);
 use Tags::HTML::Page::End;
-use Tags::Output::Raw;
 use Test::More 'tests' => 4;
 use Test::NoWarnings;
+use Tags::Output::Raw;
 
 # Test.
 my $obj = Tags::HTML::Page::End->new(
