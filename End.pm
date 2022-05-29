@@ -1,10 +1,8 @@
 package Tags::HTML::Page::End;
 
+use base qw(Tags::HTML);
 use strict;
 use warnings;
-
-use Class::Utils qw(set_params);
-use Error::Pure qw(err);
 
 our $VERSION = 0.05;
 
@@ -12,26 +10,17 @@ our $VERSION = 0.05;
 sub new {
 	my ($class, @params) = @_;
 
-	# Create object.
-	my $self = bless {}, $class;
+	# No CSS support.
+	push @params, 'no_css', 1;
 
-	# 'Tags' object.
-	$self->{'tags'} = undef;
-
-	# Process params.
-	set_params($self, @params);
-
-	# Check to 'Tags' object.
-	if (! $self->{'tags'} || ! $self->{'tags'}->isa('Tags::Output')) {
-		err "Parameter 'tags' must be a 'Tags::Output::*' class.";
-	}
+	my $self = $class->SUPER::new(@params);
 
 	# Object.
 	return $self;
 }
 
 # Process 'Tags'.
-sub process {
+sub _process {
 	my $self = shift;
 
 	# End of page.
@@ -93,9 +82,14 @@ Returns undef.
 =head1 ERRORS
 
  new():
-         Parameter 'tags' must be a 'Tags::Output::*' class.
          From Class::Utils::set_params():
                  Unknown parameter '%s'.
+         From Tags::HTML::new():
+                 Parameter 'tags' must be a 'Tags::Output::*' class.
+
+ process():
+         From Tags::HTML::process():
+                 Parameter 'tags' isn't defined.
 
 =head1 EXAMPLE
 
@@ -165,8 +159,7 @@ Returns undef.
 
 =head1 DEPENDENCIES
 
-L<Class::Utils>,
-L<Error::Pure>.
+L<Tags::HTML>.
 
 =head1 SEE ALSO
 

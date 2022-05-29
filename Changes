@@ -2,6 +2,7 @@
  - Fix bugtracker.
  - Fix example in doc.
  - Fix test dependencies.
+ - Rewrite to use Tags::HTML.
  - Sort modules in tests.
  - Update copyright years.
 
