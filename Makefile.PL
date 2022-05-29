@@ -25,12 +25,10 @@ resources 'homepage' => 'https://github.com/michal-josef-spacek/Tags-HTML-Page-E
 resources 'repository' => 'git://github.com/michal-josef-spacek/Tags-HTML-Page-End';
 test_requires 'English' => 0;
 test_requires 'Error::Pure::Utils' => 0.22;
-test_requires 'File::Object' => 0.03;
 test_requires 'Tags::Output::Raw' => 0;
 test_requires 'Tags::Output::Structure' => 0;
 test_requires 'Test::More' => 0;
 test_requires 'Test::NoWarnings' => 0;
-test_requires 'Test::Warn' => 0;
 tests_recursive;
 version '0.05';
 

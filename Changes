@@ -1,5 +1,6 @@
 0.05
  - Fix bugtracker.
+ - Fix test dependencies.
  - Sort modules in tests.
  - Update copyright years.
 
