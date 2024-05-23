@@ -2,6 +2,7 @@
  - Remove Tags::Output::Raw from tests.
  - Rename example file name to better name.
  - Revert 'Sort modules in tests'.
+ - Unify COPYRIGHT line in doc.
  - Update Module::Install to 1.21 version.
  - Update copyright years.
  - Use Test::MockObject for fake objects.
