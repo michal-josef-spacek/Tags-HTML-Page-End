@@ -4,7 +4,7 @@ use warnings;
 use English;
 use Error::Pure::Utils qw(clean);
 use Tags::HTML::Page::End;
-use Tags::Output::Raw;
+use Tags::Output::Structure;
 use Test::More 'tests' => 5;
 use Test::NoWarnings;
 
@@ -14,7 +14,7 @@ isa_ok($obj, 'Tags::HTML::Page::End');
 
 # Test.
 $obj = Tags::HTML::Page::End->new(
-	'tags' => Tags::Output::Raw->new,
+	'tags' => Tags::Output::Structure->new,
 );
 isa_ok($obj, 'Tags::HTML::Page::End');
 
@@ -35,7 +35,7 @@ clean();
 eval {
 	Tags::HTML::Page::End->new(
 		'tags' => Tags::HTML::Page::End->new(
-			'tags' => Tags::Output::Raw->new,
+			'tags' => Tags::Output::Structure->new,
 		),
 	);
 };
