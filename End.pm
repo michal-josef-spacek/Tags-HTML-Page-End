@@ -93,6 +93,8 @@ Returns undef.
 
 =head1 EXAMPLE
 
+=for comment filename=page_example.pl
+
  use strict;
  use warnings;
 
