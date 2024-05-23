@@ -5,6 +5,7 @@ use English;
 use Error::Pure::Utils qw(clean);
 use Tags::HTML::Page::End;
 use Tags::Output::Structure;
+use Test::MockObject;
 use Test::More 'tests' => 5;
 use Test::NoWarnings;
 
@@ -32,11 +33,10 @@ is(
 clean();
 
 # Test.
+my $mock = Test::MockObject->new;
 eval {
 	Tags::HTML::Page::End->new(
-		'tags' => Tags::HTML::Page::End->new(
-			'tags' => Tags::Output::Structure->new,
-		),
+		'tags' => $mock,
 	);
 };
 is(

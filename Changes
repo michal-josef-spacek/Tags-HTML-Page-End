@@ -3,6 +3,7 @@
  - Revert 'Sort modules in tests'.
  - Update Module::Install to 1.21 version.
  - Update copyright years.
+ - Use Test::MockObject for fake objects.
 
 0.05 2022-05-29T23:29:36+02:00
  - Fix bugtracker.
